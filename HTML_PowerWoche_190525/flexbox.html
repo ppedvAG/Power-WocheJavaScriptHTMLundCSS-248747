@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+
+        #flex {
+            background-color: lightseagreen;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .con {
+            width: 75px;
+            height: 50px;
+            background-color: orange;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        @media screen and (min-width: 430px) and (max-width: 600px) {
+            #flex {
+                background-color: darkorchid;
+            }
+
+            .con {
+                background-color: dodgerblue;
+                font-size: 15px;
+                width: 40px;
+                height: 30px;
+
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 900px) {
+            #flex {
+                background-color: darkred;
+            }
+
+            .con {
+                background-color: khaki;
+                font-size: 15px;
+                width: 40px;
+                height: 30px;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="flex">
+        <div class="con">
+            Container 1
+        </div>
+
+        <div class="con">
+            Container 2
+        </div>
+
+        <div class="con">
+            Container 3
+        </div>
+
+        
+        <div class="con">
+            Container 3
+        </div>
+
+        
+        <div class="con">
+            Container 3
+        </div>
+
+        
+        <div class="con">
+            Container 3
+        </div>
+
+        
+        <div class="con">
+            Container 3
+        </div>
+
+        
+        <div class="con">
+            Container 3
+        </div>
+
+        
+        <div class="con">
+            Container 3
+        </div>
+
+        
+        <div class="con">
+            Container 3
+        </div>
+    </div>
+</body>
+</html>

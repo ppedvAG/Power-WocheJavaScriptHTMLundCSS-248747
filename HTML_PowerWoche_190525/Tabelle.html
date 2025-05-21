@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelle</title>
+
+    <style>
+        table, th, tr, td {
+            border: 1px solid #000000;
+            text-align: center;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Option 1 -->
+     <table>
+
+        <thead>
+            <th>Test</th> <!-- Kopfzelle => Fettgedruckt -->
+            <th>Test</th>
+        </thead>
+
+        <tbody>
+            <td>Test1</td> <!-- Zelle => Nicht Fettgedruckt -->
+            <td>test2</td>
+        </tbody>
+
+        <tfoot>
+            <td>Fußzeile1</td>
+            <td>Fußzeile2</td>
+        </tfoot>
+
+     </table>
+
+     <br><br>
+
+     <!-- Option 2 -->
+     <table>
+
+        <tr>
+            <th>Test</th>
+            <th>Test</th>
+            <th>Test3</th>
+        </tr>
+
+        <tr>
+            <td>Test1</td>
+            <td>test2</td>
+        </tr>
+
+        <tr>
+            <td>Fußzeile1</td>
+            <td>Fußzeile2</td>
+        </tr>
+        
+     </table>
+</body>
+</html>

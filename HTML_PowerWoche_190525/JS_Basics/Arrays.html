@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        // Array erzeugen (1)
+        var bundesliga = new Array(); //leeres Feld
+
+        // Array befuellen (1)
+        bundesliga[1] = 100;
+        bundesliga[4] = "Dortmund";
+
+        // Array ausgabe
+        document.writeln(bundesliga[1]);
+        document.writeln(bundesliga[4]);
+
+        document.writeln("<br><br>");
+
+        // Array erzeugen (2)
+        const stadt = new Array(4); // Array mit 4 ELementen
+
+        // Array befuellen (2)
+        stadt[0] = "Berlin";
+        stadt[1] = "Muenchen";
+        stadt[2] = "Nuernberg";
+        stadt[3] = "Burghausen";
+        stadt[4] = "test";
+
+        // Array ausgeben (2)
+        document.writeln(stadt[0]);
+        document.writeln(stadt[1]);
+        document.writeln(stadt[2]);
+        document.writeln(stadt[3]);
+
+        // Schleife ausgabe
+        for(var i = 0; i < stadt.length; i++) {
+            console.log(stadt[i]);
+        }
+
+        document.writeln("<br><br>");
+
+        // Array erzeugen & befuellen (3)
+        var Laender = ["Deutschland", "Polen", "Italien", "Frankreich"];
+
+         // Schleife ausgabe
+         for(var i = 0; i < Laender.length; i++) {
+            console.log(Laender[i]);
+        }
+
+
+        // Zweidimensional / Assoziatives Array
+        var Hauptstadt = new Array();
+
+        Hauptstadt["Wohnort"] = "Burghausen";
+        Hauptstadt["Name"] = "Max Mustermann";
+
+        document.writeln(Hauptstadt["Wohnort"]);
+        document.writeln(Hauptstadt["Name"]);
+
+        document.writeln("<br><br>")
+
+        let menschen = [
+            {name: "Max", age: 20, courses: ["Mathematik", "Informatik"]},
+            {name: "Anna", age: 22, courses: ["Biologie", "Chemie"]}
+        ];
+
+        console.log(`Name: ${menschen[0].name}, Alter: ${menschen[0].age}, Kurse: ${menschen[0].courses.join(", ")}` );
+
+        for(var i = 0; i < menschen.length; i++) {
+            console.log(`Name: ${menschen[i].name}, Alter: ${menschen[i].age}, Kurse: ${menschen[i].courses.join(", ")}`);
+        }
+
+
+        //Zweidimensionales Array
+        var Personendaten = new Array();
+        Personendaten[0] = {};
+        Personendaten[0]["Wohnort"]= "Zuhause";
+        Personendaten[0]["Name"]= "MyName";
+    
+        Personendaten[1] = {};
+        Personendaten[1]["Wohnort"]= "Weit weg";
+        Personendaten[1]["Name"]= "Not my Name";
+    
+        for(var i =0;i<Personendaten.length;i++){
+                document.writeln(Personendaten[i].Wohnort);
+                document.writeln(Personendaten[i].Name);
+                document.writeln("<br>");
+        };
+
+        // Array Methoden
+        // length
+        const fruechte = ["Banane", "Orange", "Apfel"];
+        let size = fruechte.length;
+        document.writeln(size);
+
+        document.writeln("<br><br>");
+
+        // toString()
+        let string = fruechte.toString();
+        document.writeln(string);
+
+        document.writeln("<br><br>");
+
+        // join()
+        let join = fruechte.join(" * ");
+        document.writeln(join);
+
+        document.writeln("<br><br>");
+
+        // pop()
+        let pop = fruechte.pop();
+        document.writeln(pop);
+
+        document.writeln("<br><br>");
+
+        // push()
+        let push = fruechte.push("Kiwi");
+        document.writeln(push);
+
+        // unshift()
+        let unshift = fruechte.unshift("Erdbeere");
+        document.writeln(unshift);
+
+        document.writeln("<br><br>");
+
+        // concat()
+        const arr1 = ["Seline", "Lara"];
+        const arr2 = ["Fabian", "Roman", "Robin"];
+        const arr3 = ["Klaus", "Peter"];
+
+        const myArr = arr1.concat(arr2, arr3);
+        document.writeln(myArr);
+
+        document.writeln("<br><br>");
+
+
+        var test = ["Wassermeloe", "ANANAS", "Kiwi"];
+        // splice
+        test.splice(2, 0, "Zitrone", "Limette");
+
+        for(var i = 0; i < test.length; i++) {
+            document.writeln(test[i]);
+        }
+
+        document.writeln("<br><br>");
+
+        // slice() = schneidet aus einem vorhandenen Array einen wert in einen neuen Array um
+        const neu = ["Haus", "Wohnung", "Leiter", "Garage"];
+        const umspeichenr = neu.slice(2, 3);
+        document.writeln(umspeichenr);
+
+        document.writeln("<br><br>");
+
+        //reverse()
+        const umgedreht = neu.reverse();
+        document.writeln(umgedreht);
+
+
+    </script>
+</body>
+</html>
