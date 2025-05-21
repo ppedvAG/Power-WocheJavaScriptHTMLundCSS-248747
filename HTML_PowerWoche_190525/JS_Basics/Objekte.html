@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekte</title>
+</head>
+<body>
+    
+    <script>
+
+        // Konstruktor
+        function Auto(Marke, Modell) {
+            this.Marke = Marke;
+            this.Modell = Modell;
+        }
+
+        // Initialisierung des Objektes mit "new"
+        var Golf = new Auto("VW", "Golf VII");
+
+        // Ausgeben
+        document.writeln("Marke: " + Golf.Marke + "<br>");
+        document.writeln("Modell: " + Golf.Modell);
+
+        document.writeln("<br><br>")
+
+        // Anonyme Objekte
+        var ObjVar = {
+            "Wohnort" : "Burghausen",
+            "Land" : "Deutschland",
+            "Postleitzahl" : 84489
+        }
+
+        document.writeln(ObjVar.Wohnort + "<br>" + ObjVar.Land + "<br>" + ObjVar.Postleitzahl + "<br>");
+
+        // typeof = gibt einfach nur den Datentyp zurück
+        document.writeln(typeof(ObjVar.Wohnort));
+
+        document.writeln("<br><br>")
+
+        // Dynamisches Überschreiben der Eigenschaften
+        Golf.Marke = "BMW";
+        Golf.Modell = "320i";
+        document.writeln("Marke: " + Golf.Marke + "<br>");
+        document.writeln("Modell: " + Golf.Modell);
+
+
+        // If-Anweisung:
+        function Kunde(name) {
+            this.name = name;
+        }
+
+        document.writeln("<br><br>")
+
+        var Kunden = new Kunde("Konstantin");
+
+        if(Kunden.name) document.writeln("Die Eigenscahfte existiert")
+        else document.writeln("Die Eigenschaft existiert nicht");
+
+        document.writeln("<br><br>")
+
+        // With- Anweisung
+        function Spieler(name, vorname) {
+            this.name = name;
+            this.vorname = vorname;
+        }
+
+        var Sp = new Spieler("Alaba", "David");
+
+        with(Sp) {
+            document.writeln(name + "<br>");
+            document.writeln(vorname + "<br>");
+        }
+
+        document.writeln("<br><br>")
+
+        // For-In
+        for(laufvariable in Sp) {
+            document.writeln("Eigenschaft: " + laufvariable + ", Wert: " + Sp[laufvariable] + "<br>");
+        }
+
+
+        // Instanceof-Operator
+        // - Ueberprüfen ob eine Objektinstanz vom Typ eines bestehenden Objektes ist
+        function Fussballclub() {}
+        var Bayern = new Fussballclub();
+        if(Bayern instanceof Fussballclub)
+            document.writeln("Bayern ist eine Instanz vom Fussballclub");
+
+        alert("Hallo ich bin ein Alert");
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ungerade</title>
+</head>
+<body>
+
+    <script>
+
+        let zahlen = [3, 7, 2, 8, 5, 10, 1, 4, 6, 9];
+
+        // Variablen
+        let maxZahl = zahlen[0];
+        let minZahl = zahlen[0];
+        let anzahlGerade = 0;
+        let anzahlUngerade = 0;
+
+        // 2. Verwende eine Schleife und If-Abfragen, um die Maximale und minimalste Zahl zu finden
+        for(let i = 0; i < zahlen.length; i++) {
+            if(zahlen[i] > maxZahl) {
+                maxZahl = zahlen[i];
+            }
+            if(zahlen[i] < minZahl) {
+                minZahl = zahlen[i];
+            }
+            // 3. Verwende in der schleife eine If Abfrage um die Anzahl der Geraden und geraden Zahlen
+            if(zahlen[i] % 2 === 0) {
+                anzahlGerade++;
+            } else {
+                anzahlUngerade++;
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
